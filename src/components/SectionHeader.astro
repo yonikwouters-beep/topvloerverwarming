@@ -1,0 +1,37 @@
+---
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  centered?: boolean;
+  light?: boolean;
+}
+
+const {
+  eyebrow,
+  title,
+  subtitle,
+  centered = true,
+  light = false,
+} = Astro.props;
+---
+
+<div class={`max-w-2xl ${centered ? 'mx-auto text-center' : ''} mb-14`}>
+  {eyebrow && (
+    <div class="inline-flex items-center gap-2 mb-4">
+      <span class="w-8 h-0.5 bg-accent"></span>
+      <span class={`text-xs font-semibold uppercase tracking-widest ${light ? 'text-accent-light' : 'text-accent'}`}>
+        {eyebrow}
+      </span>
+      <span class="w-8 h-0.5 bg-accent"></span>
+    </div>
+  )}
+  <h2 class={`font-heading text-3xl sm:text-4xl font-800 leading-tight mb-4 ${light ? 'text-white' : 'text-brand-dark'}`}>
+    {title}
+  </h2>
+  {subtitle && (
+    <p class={`text-base leading-relaxed ${light ? 'text-slate-300' : 'text-slate-500'}`}>
+      {subtitle}
+    </p>
+  )}
+</div>

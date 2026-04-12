@@ -1,0 +1,92 @@
+---
+import SectionHeader from './SectionHeader.astro';
+
+const testimonials = [
+  {
+    name: 'Jeroen & Lisa V.',
+    role: 'Nieuwbouwwoning, Antwerpen',
+    quote: 'Topvloerverwarming heeft onze vloerverwarming geplaatst in ons nieuwbouwhuis. De communicatie was vlot, de installateurs waren professioneel en het resultaat is meer dan perfect. Ons huis warmt nu super snel op!',
+    rating: 5,
+    initials: 'JL',
+  },
+  {
+    name: 'Marc D.',
+    role: 'Renovatieproject, Gent',
+    quote: 'Voor onze renovatie kozen we voor het freessysteem. Geen opbouwhoogte verloren en onze vloeren bleven intact. Binnen 2 dagen volledig geplaatst, echt verbluffend vakmanschap.',
+    rating: 5,
+    initials: 'MD',
+  },
+  {
+    name: 'An & Peter W.',
+    role: 'Appartement, Brussel',
+    quote: 'Uitstekende service van A tot Z. Ze namen de tijd om alles te uitleggen, beantwoordden al onze vragen en de prijs was heel correct. Wij raden Topvloerverwarming aan iedereen aan!',
+    rating: 5,
+    initials: 'AP',
+  },
+];
+---
+
+<section class="py-24 bg-brand-dark relative overflow-hidden" aria-labelledby="testimonials-heading">
+  <!-- Background decoration -->
+  <div class="absolute inset-0" aria-hidden="true">
+    <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand opacity-50 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-accent opacity-5 blur-3xl"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <SectionHeader
+      eyebrow="Wat klanten zeggen"
+      title="Tevreden klanten, warme huizen"
+      subtitle="Ontdek wat klanten vertellen over hun ervaring met TopVloerverwarming."
+      light={true}
+    />
+
+    <!-- Testimonial cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map(({ name, role, quote, rating, initials }) => (
+        <article class="bg-white/8 backdrop-blur-sm border border-white/15 rounded-2xl p-7 hover:bg-white/12 transition-colors">
+          <!-- Stars -->
+          <div class="flex items-center gap-1 mb-5" aria-label={`${rating} van 5 sterren`}>
+            {Array.from({ length: rating }).map(() => (
+              <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005z" clip-rule="evenodd" />
+              </svg>
+            ))}
+          </div>
+
+          <!-- Quote -->
+          <blockquote class="text-slate-300 text-sm leading-relaxed mb-6 italic">
+            "{quote}"
+          </blockquote>
+
+          <!-- Author -->
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+              <span class="text-white text-xs font-bold">{initials}</span>
+            </div>
+            <div>
+              <p class="text-white font-semibold text-sm">{name}</p>
+              <p class="text-slate-400 text-xs">{role}</p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-14 text-center">
+      <p class="text-slate-400 text-sm mb-6">Klaar om uw huis te voorzien van het beste comfort?</p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white font-semibold px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-200"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+        </svg>
+        Gratis offerte aanvragen
+      </a>
+    </div>
+
+  </div>
+</section>

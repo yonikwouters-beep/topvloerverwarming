@@ -1,0 +1,158 @@
+---
+import SectionHeader from './SectionHeader.astro';
+
+const services = [
+  {
+    id: 'nat-systeem',
+    tag: 'Meest Populair',
+    title: 'Nat Systeem',
+    subtitle: 'Ingestort in dekvloer',
+    description: 'De buizen worden ingestort in een natte dekvloer. Dit systeem biedt de optimale warmteoverdracht en is ideaal voor nieuwbouw.',
+    features: ['Optimale warmteverdeling', 'Laagste energieverbruik', 'Ideaal voor warmtepomp', 'Geschikt voor alle vloersoorten'],
+    icon: 'M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18',
+    highlighted: true,
+  },
+  {
+    id: 'droog-systeem',
+    tag: 'Renovatie',
+    title: 'Droog Systeem',
+    subtitle: 'Zonder opbouw in dekvloer',
+    description: 'Ideaal voor renovatieprojecten. De buizen worden in isolatiepanelen gedrukt zonder natte dekvloer, waardoor de opbouwhoogte minimaal is.',
+    features: ['Minimale opbouwhoogte', 'Geen droogtijd vereist', 'Snel bewoonbaar', 'Ideaal voor renovatie'],
+    icon: 'M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z',
+    highlighted: false,
+  },
+  {
+    id: 'freessysteem',
+    tag: 'Infrezen',
+    title: 'Freessysteem',
+    subtitle: 'Gefreesd in bestaande vloer',
+    description: 'Sleuven worden gefreesd in de bestaande betonvloer en de buizen worden erin gelegd. De meest discrete oplossing voor renovatieprojecten.',
+    features: ['Geen opbouwhoogte', 'Bestaande vloer behouden', 'Minimale overlast', 'Compatibel met alle afwerking'],
+    icon: 'M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z',
+    highlighted: false,
+  },
+];
+---
+
+<section class="py-24 bg-white" aria-labelledby="services-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <SectionHeader
+      eyebrow="Onze diensten"
+      title="De juiste oplossing voor elk project"
+      subtitle="Of u nu bouwt of renoveert — wij hebben het perfecte vloerverwarmingssysteem voor uw situatie."
+    />
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+      {services.map(({ id, tag, title, subtitle, description, features, icon, highlighted }) => (
+        <article
+          id={id}
+          class={`relative rounded-3xl overflow-hidden border transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
+            highlighted
+              ? 'bg-brand border-brand shadow-xl shadow-brand/20'
+              : 'bg-white border-slate-100 hover:border-brand/20'
+          }`}
+        >
+          <!-- Header area -->
+          <div class={`p-7 pb-5 ${highlighted ? 'bg-brand' : ''}`}>
+            <!-- Tag -->
+            <span
+              class={`inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-5 ${
+                highlighted ? 'bg-accent text-white' : 'bg-accent/10 text-accent'
+              }`}
+            >
+              {tag}
+            </span>
+
+            <!-- Icon -->
+            <div
+              class={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 ${
+                highlighted ? 'bg-white/15' : 'bg-brand/8'
+              }`}
+            >
+              <svg
+                class={`w-7 h-7 ${highlighted ? 'text-white' : 'text-brand'}`}
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d={icon} />
+              </svg>
+            </div>
+
+            <h3 class={`font-heading font-bold text-2xl mb-1 ${highlighted ? 'text-white' : 'text-brand-dark'}`}>
+              {title}
+            </h3>
+            <p class={`text-sm font-medium mb-4 ${highlighted ? 'text-blue-200' : 'text-muted'}`}>
+              {subtitle}
+            </p>
+            <p class={`text-sm leading-relaxed ${highlighted ? 'text-blue-100' : 'text-slate-500'}`}>
+              {description}
+            </p>
+          </div>
+
+          <!-- Divider -->
+          <div class={`mx-7 border-t ${highlighted ? 'border-white/15' : 'border-slate-100'}`}></div>
+
+          <!-- Features list -->
+          <div class={`p-7 pt-5 ${highlighted ? 'bg-brand' : ''}`}>
+            <ul class="space-y-3 mb-7">
+              {features.map((feature) => (
+                <li class="flex items-center gap-3">
+                  <div
+                    class={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 ${
+                      highlighted ? 'bg-white/20' : 'bg-accent/15'
+                    }`}
+                  >
+                    <svg
+                      class={`w-3 h-3 ${highlighted ? 'text-white' : 'text-accent'}`}
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <span class={`text-sm ${highlighted ? 'text-blue-100' : 'text-slate-600'}`}>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <!-- CTA -->
+            <a
+              href="/systemen"
+              class={`flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold transition-all duration-200 ${
+                highlighted
+                  ? 'bg-accent hover:bg-accent-dark text-white shadow-md'
+                  : 'border-2 border-brand text-brand hover:bg-brand hover:text-white'
+              }`}
+            >
+              Meer info
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
+
+        </article>
+      ))}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center">
+      <a
+        href="/systemen"
+        class="inline-flex items-center gap-2 text-brand font-semibold hover:text-accent transition-colors group"
+      >
+        Alle systemen vergelijken
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>

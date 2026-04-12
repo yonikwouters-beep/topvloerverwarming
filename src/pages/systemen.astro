@@ -1,0 +1,341 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CTABanner from '../components/CTABanner.astro';
+
+const navAnchors = [
+  { href: '#hd-pe-buizen', label: 'HD-PE buizen' },
+  { href: '#kwaliteit', label: 'Kwaliteit' },
+  { href: '#collectoren', label: 'Collectoren' },
+  { href: '#kunststof-collectoren', label: 'Kunststof' },
+];
+
+const kwaliteitPunten = [
+  'Gebruik van hoogwaardige grondstoffen',
+  'Ultramoderne productiemethodes',
+  'Elektronische productiecontrole van elke centimeter geproduceerde kunststofbuis en dit op wandsterkte, diameter en excentriciteit',
+  'Periodieke externe controles door verschillende onafhankelijke instituten',
+];
+---
+
+<Layout
+  title="Systemen & materialen"
+  description="HD-PE kunststofbuizen en Begetube-collectoren voor vloerverwarming en -koeling: kwaliteit, productiecontrole en montage-oplossingen op maat."
+  canonical="/systemen"
+>
+
+  <!-- Page Hero -->
+  <section class="bg-gradient-to-br from-brand-dark to-brand py-20 relative overflow-hidden">
+    <div class="absolute inset-0" aria-hidden="true">
+      <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-accent opacity-5 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-60 h-60 rounded-full bg-white opacity-5 blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-white/10 text-white text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-7">
+          <span class="w-2 h-2 rounded-full bg-accent"></span>
+          Materialen & collectoren
+        </div>
+        <h1 class="font-heading text-4xl sm:text-5xl font-bold text-white leading-tight mb-5">
+          Buizen en collectoren<br />waarop u kunt vertrouwen
+        </h1>
+        <p class="text-slate-200 text-lg leading-relaxed max-w-2xl mb-8">
+          Al onze kunststofbuizen vertrekken van HD-PE. Onze Begetube-collectoren combineren debietmeting, regeling per kring en oplossingen voor verwarming én koeling.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          {navAnchors.map(({ href, label }) => (
+            <a
+              href={href}
+              class="inline-flex items-center gap-1.5 bg-white/15 hover:bg-accent border border-white/20 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors scroll-mt-28"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HD-PE & twee eindproducten -->
+  <section id="hd-pe-buizen" class="scroll-mt-24 py-20 bg-white" aria-labelledby="hd-pe-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12 lg:mb-14">
+        <div class="inline-flex items-center gap-2 mb-4">
+          <span class="w-8 h-0.5 bg-accent"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-accent">Polyethyleen (HD-PE)</span>
+        </div>
+        <h2 id="hd-pe-heading" class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark mb-6">
+          Stevig fundament voor elke leiding
+        </h2>
+        <div class="space-y-4 text-slate-600 leading-relaxed text-base">
+          <p>
+            Al onze buizen worden steeds gemaakt uit de basisgrondstof polyethyleen (HD-PE). Op deze basisgrondstof zijn 2 bewerkingsmogelijkheden mogelijk die leiden tot de volgende 2 eindproducten: <strong class="text-brand-dark font-semibold">PEX</strong> (de Engelstalige benaming voor VPE) en <strong class="text-brand-dark font-semibold">PERT</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <button
+          type="button"
+          id="open-lightbox-sys1"
+          class="group systemen-thumb-btn w-full rounded-2xl border border-slate-100 bg-slate-50 text-left shadow-md transition-all hover:border-brand/30 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 cursor-zoom-in overflow-hidden"
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          aria-controls="lightbox-sys1"
+          aria-label="Afbeelding PEX (VPE) vergroten"
+        >
+          <div class="flex min-h-[18rem] items-center justify-center px-3 py-5 sm:min-h-[22rem] sm:px-5 sm:py-8 lg:min-h-[26rem]">
+            <img
+              src="/systemen-1.webp"
+              alt=""
+              class="pointer-events-none max-h-[min(42rem,78vh)] w-auto max-w-full object-contain select-none"
+              width="900"
+              height="675"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <span class="flex items-center justify-center gap-1.5 border-t border-slate-200/90 bg-white px-3 py-2.5 text-xs font-medium text-slate-500 group-hover:text-brand transition-colors">
+            <svg class="h-4 w-4 shrink-0 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+            </svg>
+            Klik om te vergroten
+          </span>
+        </button>
+
+        <button
+          type="button"
+          id="open-lightbox-sys2"
+          class="group systemen-thumb-btn w-full rounded-2xl border border-slate-100 bg-slate-50 text-left shadow-md transition-all hover:border-brand/30 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 cursor-zoom-in overflow-hidden"
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          aria-controls="lightbox-sys2"
+          aria-label="Afbeelding PERT vergroten"
+        >
+          <div class="flex min-h-[18rem] items-center justify-center px-3 py-5 sm:min-h-[22rem] sm:px-5 sm:py-8 lg:min-h-[26rem]">
+            <img
+              src="/systemen-2.webp"
+              alt=""
+              class="pointer-events-none max-h-[min(42rem,78vh)] w-auto max-w-full object-contain select-none"
+              width="900"
+              height="675"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+          <span class="flex items-center justify-center gap-1.5 border-t border-slate-200/90 bg-white px-3 py-2.5 text-xs font-medium text-slate-500 group-hover:text-brand transition-colors">
+            <svg class="h-4 w-4 shrink-0 opacity-70" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+            </svg>
+            Klik om te vergroten
+          </span>
+        </button>
+      </div>
+
+      <!-- Lightbox: PEX (systemen-1) -->
+      <dialog
+        id="lightbox-sys1"
+        class="systemen-lightbox m-0 max-h-none max-w-none border-0 bg-transparent p-0 backdrop:bg-slate-900/90 open:flex"
+        aria-labelledby="lightbox-sys1-title"
+      >
+        <div class="pointer-events-none flex min-h-[100dvh] w-[100vw] max-w-[100vw] items-center justify-center p-3 sm:p-6">
+          <div
+            class="pointer-events-auto relative max-h-[92dvh] w-full max-w-[min(96vw,1400px)] overflow-auto rounded-xl bg-white p-2 shadow-2xl sm:p-3"
+            role="document"
+          >
+            <p id="lightbox-sys1-title" class="sr-only">PEX (VPE) — vergrote weergave</p>
+            <img
+              src="/systemen-1.webp"
+              alt="PEX (VPE) — eindproduct op basis van HD-PE, vergrote weergave"
+              class="mx-auto block max-h-[88dvh] w-auto max-w-full object-contain"
+              width="1400"
+              height="1050"
+              loading="eager"
+              decoding="async"
+            />
+            <form method="dialog" class="absolute right-2 top-2 sm:right-3 sm:top-3">
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded-lg bg-brand-dark/90 px-3 py-2 text-sm font-semibold text-white shadow-md backdrop-blur-sm transition-colors hover:bg-brand-dark"
+              >
+                Sluiten
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- Lightbox: PERT (systemen-2) -->
+      <dialog
+        id="lightbox-sys2"
+        class="systemen-lightbox m-0 max-h-none max-w-none border-0 bg-transparent p-0 backdrop:bg-slate-900/90 open:flex"
+        aria-labelledby="lightbox-sys2-title"
+      >
+        <div class="pointer-events-none flex min-h-[100dvh] w-[100vw] max-w-[100vw] items-center justify-center p-3 sm:p-6">
+          <div
+            class="pointer-events-auto relative max-h-[92dvh] w-full max-w-[min(96vw,1400px)] overflow-auto rounded-xl bg-white p-2 shadow-2xl sm:p-3"
+            role="document"
+          >
+            <p id="lightbox-sys2-title" class="sr-only">PERT — vergrote weergave</p>
+            <img
+              src="/systemen-2.webp"
+              alt="PERT — eindproduct op basis van HD-PE, vergrote weergave"
+              class="mx-auto block max-h-[88dvh] w-auto max-w-full object-contain"
+              width="1400"
+              height="1050"
+              loading="eager"
+              decoding="async"
+            />
+            <form method="dialog" class="absolute right-2 top-2 sm:right-3 sm:top-3">
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded-lg bg-brand-dark/90 px-3 py-2 text-sm font-semibold text-white shadow-md backdrop-blur-sm transition-colors hover:bg-brand-dark"
+              >
+                Sluiten
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </div>
+  </section>
+
+  <script>
+    function wireSystemenLightboxes() {
+      const pairs: [string, string][] = [
+        ['open-lightbox-sys1', 'lightbox-sys1'],
+        ['open-lightbox-sys2', 'lightbox-sys2'],
+      ];
+
+      for (const [openId, dlgId] of pairs) {
+        const opener = document.getElementById(openId);
+        const dlg = document.getElementById(dlgId) as HTMLDialogElement | null;
+        if (!opener || !dlg || opener.dataset.lbWired === '1') continue;
+        opener.dataset.lbWired = '1';
+
+        opener.addEventListener('click', () => {
+          dlg.showModal();
+          opener.setAttribute('aria-expanded', 'true');
+          queueMicrotask(() => {
+            dlg.querySelector<HTMLButtonElement>('form[method="dialog"] button[type="submit"]')?.focus();
+          });
+        });
+
+        dlg.addEventListener('close', () => {
+          opener.setAttribute('aria-expanded', 'false');
+        });
+
+        dlg.addEventListener('click', (e) => {
+          if (e.target === dlg) dlg.close();
+        });
+
+        dlg.addEventListener('cancel', () => {
+          opener.setAttribute('aria-expanded', 'false');
+        });
+      }
+    }
+
+    wireSystemenLightboxes();
+    document.addEventListener('astro:page-load', wireSystemenLightboxes);
+  </script>
+
+  <!-- Kwaliteit / borg -->
+  <section id="kwaliteit" class="scroll-mt-24 py-20 bg-surface" aria-labelledby="kwaliteit-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <SectionHeader
+        eyebrow="Kwaliteitsborging"
+        title="Al onze buizen staan borg voor"
+        subtitle="Van grondstof tot eindcontrole: elke meter buis voldoet aan strikte normen."
+      />
+
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 max-w-5xl mx-auto">
+        {kwaliteitPunten.map((tekst) => (
+          <li class="flex gap-4 bg-white rounded-2xl p-6 lg:p-7 border border-slate-100 shadow-sm hover:border-brand/15 hover:shadow-md transition-all duration-300">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+              </svg>
+            </div>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed pt-0.5">{tekst}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Collectoren intro -->
+  <section id="collectoren" class="scroll-mt-24 py-20 bg-white" aria-labelledby="collectoren-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 mb-4">
+          <span class="w-8 h-0.5 bg-accent"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-accent">Begetube</span>
+        </div>
+        <h2 id="collectoren-heading" class="font-heading text-3xl sm:text-4xl font-bold text-brand-dark mb-6">
+          Collectoren vloerverwarming
+        </h2>
+        <p class="text-slate-600 leading-relaxed text-base">
+          Begetube-collectoren zijn steeds voorzien van debietmeters op de aanvoerzijde en van thermostatische afsluiters op de retourzijde. Deze laatste stellen de gebruiker in staat om de kringen afzonderlijk te sluiten of automatisch te regelen d.m.v. zoneventielen of elektromotoren.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kunststof collectoren + afbeelding + detailtekst -->
+  <section id="kunststof-collectoren" class="scroll-mt-24 py-20 bg-surface border-y border-slate-100" aria-labelledby="kunststof-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div>
+          <h2 id="kunststof-heading" class="font-heading text-2xl sm:text-3xl font-bold text-brand-dark mb-6">
+            Gemonteerde kunststof collectoren geschikt voor verwarming en koeling
+          </h2>
+          <div class="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+            <p>
+              Gemonteerde collectoren ø1 in kunststof met topdebietmeters, bolkranen met rode en blauwe vlinder, vul- en aftapkranen en thermometers.
+            </p>
+            <p>
+              Deze collectoren zijn vervaardigd uit vezelversterkte kunststof. Het gebruik van kunststof collectoren is een alternatief bij toepassingen met vloerkoeling. Bij het gebruik van metalen collectoren moeten deze voorzien worden van een isolerend omhulsel, om condensatie te voorkomen.
+            </p>
+            <p>
+              De gemonteerde collector is voorzien van topdebietmeters op de aanvoercollector en thermostatische ventielen op de retourcollector.
+            </p>
+            <p>
+              De collectoren worden gemonteerd op dubbele kunststof ophangbeugels en zijn beschikbaar van 2 tot 12 aansluitingen in øEK.
+            </p>
+            <p>
+              Verkrijgbaar met manuele ontluchters of automatische ontluchters in kunststof.
+            </p>
+          </div>
+          <a
+            href="/contact"
+            class="inline-flex items-center gap-2 mt-8 bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-md"
+          >
+            Vraag advies over collectoren
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+
+        <figure class="rounded-2xl border border-slate-100 bg-slate-50 shadow-lg lg:sticky lg:top-28 overflow-hidden">
+          <div class="flex items-center justify-center p-4 sm:p-6 min-h-[14rem] max-h-[min(36rem,75vh)]">
+            <img
+              src="/systemen-3.webp"
+              alt="Gemonteerde kunststof collectoren voor vloerverwarming en -koeling"
+              class="max-w-full max-h-[min(32rem,70vh)] w-auto h-auto object-contain"
+              width="900"
+              height="675"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner />
+</Layout>

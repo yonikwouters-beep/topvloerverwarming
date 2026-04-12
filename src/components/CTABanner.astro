@@ -1,0 +1,67 @@
+---
+---
+
+<section class="py-20 bg-accent relative overflow-hidden" aria-label="Oproep tot actie">
+  <!-- Background decoration -->
+  <div class="absolute inset-0" aria-hidden="true">
+    <div class="absolute -top-10 -right-10 w-64 h-64 rounded-full bg-white opacity-5 blur-2xl"></div>
+    <div class="absolute -bottom-10 -left-10 w-80 h-80 rounded-full bg-accent-dark opacity-30 blur-2xl"></div>
+    <!-- Grid pattern -->
+    <div class="absolute inset-0 opacity-5"
+      style="background-image: url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E\")"
+    ></div>
+  </div>
+
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Eyebrow -->
+    <div class="inline-flex items-center gap-2 bg-white/20 text-white text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-7">
+      <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+      Gratis & vrijblijvend
+    </div>
+
+    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
+      Klaar voor warm en energiezuinig comfort?
+    </h2>
+    <p class="text-orange-100 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+      Ontvang binnen 24 uur een gratis en gedetailleerde offerte op maat. Geen verplichtingen, geen verborgen kosten.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 bg-white text-accent hover:bg-slate-50 font-bold text-base px-8 py-4 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 w-full sm:w-auto justify-center"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+        </svg>
+        Offerte aanvragen
+      </a>
+      <a
+        href="tel:+32456940578"
+        class="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 w-full sm:w-auto justify-center"
+        aria-label="Direct bellen: +32 456 94 05 78"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        </svg>
+        Direct bellen
+      </a>
+    </div>
+
+    <!-- Trust signals -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-6">
+      {[
+        'Reactie binnen 24 uur',
+        'Geheel vrijblijvend',
+        'Gratis advies op locatie',
+      ].map((signal) => (
+        <div class="flex items-center gap-2 text-orange-100">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+          </svg>
+          <span class="text-sm font-medium">{signal}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
