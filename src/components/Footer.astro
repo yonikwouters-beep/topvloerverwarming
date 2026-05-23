@@ -14,6 +14,7 @@ const company = [
 ];
 
 const currentYear = new Date().getFullYear();
+const logoSrc = encodeURI('/Logo - TOPvloerverwarming_TRANSP.png');
 ---
 
 <footer class="bg-brand-dark text-white" role="contentinfo">
@@ -26,11 +27,11 @@ const currentYear = new Date().getFullYear();
       <div class="lg:col-span-1">
         <a href="/" class="inline-flex items-center mb-6 bg-transparent p-0" aria-label="Topvloerverwarming - Home">
           <img
-            src="/logo-topvloerverwarming.webp"
+            src={logoSrc}
             alt="Topvloerverwarming"
-            class="h-16 sm:h-[5rem] md:h-[5.5rem] w-auto max-w-[min(100%,420px)] object-contain object-left"
-            width="420"
-            height="88"
+            class="h-16 sm:h-20 md:h-[6.5rem] w-auto max-w-[min(100%,460px)] object-contain object-left"
+            width="460"
+            height="104"
             loading="lazy"
             decoding="async"
           />

@@ -7,6 +7,7 @@ const navLinks = [
 ];
 
 const currentPath = Astro.url.pathname;
+const logoSrc = encodeURI('/Logo - TOPvloerverwarming_TRANSP.png');
 ---
 
 <header
@@ -19,11 +20,11 @@ const currentPath = Astro.url.pathname;
       <!-- Logo -->
       <a href="/" class="flex items-center group shrink-0 bg-transparent" aria-label="Topvloerverwarming - Home">
         <img
-          src="/logo-topvloerverwarming.webp"
+          src={logoSrc}
           alt="Topvloerverwarming"
-          class="h-14 sm:h-16 md:h-[4.75rem] w-auto max-h-[4.75rem] object-contain object-left"
-          width="360"
-          height="76"
+          class="h-14 sm:h-[5.25rem] md:h-20 w-auto max-h-20 object-contain object-left"
+          width="400"
+          height="80"
           loading="eager"
           decoding="async"
         />
@@ -131,7 +132,7 @@ const currentPath = Astro.url.pathname;
 </header>
 
 <!-- Spacer so content doesn't hide behind fixed navbar -->
-<div class="h-[92px] sm:h-[100px]" aria-hidden="true"></div>
+<div class="h-[96px] sm:h-[108px]" aria-hidden="true"></div>
 
 <script>
   const btn = document.getElementById('mobile-menu-btn');
